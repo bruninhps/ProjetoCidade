@@ -1,0 +1,22 @@
+﻿@model Projeto1.Models.Usuario
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<h2>Register</h2>
+
+<form asp-action="Cadastro" method="post">
+    <div>
+        <label>Nome:</label>
+        <input asp-for="Nome" required />
+    </div>
+    <div>
+        <label>Email:</label>
+        <input asp-for="Email" type="email" required />
+    </div>
+    <div>
+        <label>Senha:</label>
+        <input asp-for="Senha" type="password" required />
+    </div>
+    <button type="submit">Novo Cadastrado</button>
+</form>
