@@ -1,0 +1,16 @@
+﻿@model EcommerceNovo.Models.Usuario;
+<link href="~/css/login.css" rel="stylesheet" />
+
+<h1 class="login-title">Login</h1>
+
+<form asp-action="Login" method="post" class="login-form">
+    <div class="form-group">
+        <label>Email:</label>
+        <input type="email" name="email" required />
+    </div>
+    <div class="form-group">
+        <label>Senha:</label>
+        <input type="password" name="senha" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
