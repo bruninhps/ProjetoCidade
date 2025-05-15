@@ -15,7 +15,7 @@ namespace EcommerceNovo.Repositorio
             using (var conexao = new MySqlConnection(_conexaoMySQL))
             {
                 conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("insert into produto (Id, Nome, Descricao, Quantidade, Preco) values (@codprod, @nome, @descricao, @quantidade, @preco )", conexao);
+                MySqlCommand cmd = new MySqlCommand("insert into produto (Id, Nome, Descricao, Quantidade, Preco) values (@id, @nome, @descricao, @quantidade, @preco )", conexao);
                 cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = produto.Id;
                 cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = produto.Nome;
                 cmd.Parameters.Add("@descricao", MySqlDbType.VarChar).Value = produto.Descricao;
@@ -88,7 +88,7 @@ namespace EcommerceNovo.Repositorio
             using (var conexao = new MySqlConnection(_conexaoMySQL))
             {
                 conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT * from produto where CodProd=@codprod ", conexao);
+                MySqlCommand cmd = new MySqlCommand("SELECT * from produto where Id=@id ", conexao);
 
                 cmd.Parameters.AddWithValue("@id", Codigo);
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);

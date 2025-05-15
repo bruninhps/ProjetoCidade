@@ -3,16 +3,47 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - EcommerceNovo</title>
+    <title>@ViewData["Title"] - Ferrari</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/EcommerceNovo.styles.css" asp-append-version="true" />
+    <style>
+        /* Estilo personalizado para a navbar */
+        .navbar-brand {
+            font-size: 1.8rem; /* Tamanho aumentado para o logo Ferrari */
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-item {
+            margin: 0 0.5rem;
+        }
+
+        .nav-link {
+            font-size: 1.2rem; /* Tamanho aumentado para os links */
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+            .nav-link:hover {
+                transform: translateY(-2px);
+                text-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+            }
+
+        /* Efeito especial para o item ativo */
+        .nav-item.active .nav-link {
+            color: #ff2800 !important; /* Vermelho Ferrari para o item ativo */
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">EcommerceNovo</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FERRARI</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,10 +51,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Login">Login</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">INÍCIO</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Produto" asp-action="Index">Produto</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Usuario" asp-action="Login">LOGIN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Produto" asp-action="Index">CRUD PRODUTO</a>
                         </li>
                     </ul>
                 </div>
@@ -38,7 +72,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2025 - EcommerceNovo - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2025 - Ferrari - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

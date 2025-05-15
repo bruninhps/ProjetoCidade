@@ -1,0 +1,128 @@
+/* Estilo geral */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+/* Container principal */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    margin: 0;
+}
+
+/* Card do formulário */
+.col-md-4 {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #e32121; /* Vermelho Ferrari */
+}
+
+/* Título */
+h1 {
+    color: #000;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Linha divisória */
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e32121, transparent);
+    margin: 1.5rem 0;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.control-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+    .form-control:focus {
+        border-color: #e32121;
+        box-shadow: 0 0 0 0.2rem rgba(227, 33, 33, 0.15);
+        outline: none;
+    }
+
+/* Botões */
+.btn-primary {
+    background-color: #e32121;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+    .btn-primary:hover {
+        background-color: #c11a1a;
+        transform: translateY(-2px);
+    }
+
+/* Link Voltar */
+a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #e32121;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+    a:hover {
+        color: #c11a1a;
+        text-decoration: underline;
+    }
+
+/* Mensagens de erro */
+.text-danger {
+    color: #e32121;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .col-md-4 {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}

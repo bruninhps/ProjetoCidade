@@ -15,3 +15,5 @@ CREATE TABLE Produto(
     Quantidade int not null,
     Preco decimal (12,2)
 );
+
+insert into Usuario (Nome, Email, Senha) values ('Bruno', 'bruno@gmail.com', '2393');

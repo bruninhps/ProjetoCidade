@@ -1,16 +1,116 @@
-﻿@model EcommerceNovo.Models.Usuario;
+﻿@model EcommerceNovo.Models.Usuario
 <link href="~/css/login.css" rel="stylesheet" />
+<style>
 
-<h1 class="login-title">Login</h1>
+    body {
+        background-color: #f8f9fa; /* Cinza claro */
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 
-<form asp-action="Login" method="post" class="login-form">
-    <div class="form-group">
-        <label>Email:</label>
-        <input type="email" name="email" required />
+    /* Container do Login (centralizado) */
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        padding: 20px;
+    }
+
+    /* Card de Login */
+    .login-card {
+        background: white;
+        border-radius: 8px;
+        padding: 30px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        text-align: center;
+    }
+
+    .login-title {
+        color: #343a40; /* Cinza escuro */
+        font-weight: 600;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .login-subtitle {
+        color: #6c757d; /* Cinza médio */
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+
+    /* Inputs */
+    .login-input {
+        width: 100%;
+        padding: 12px 15px;
+        margin: 10px 0;
+        border: 1px solid #ced4da; /* Bordas suaves */
+        border-radius: 4px;
+        font-size: 0.95rem;
+    }
+
+        .login-input:focus {
+            border-color: #6c757d;
+            outline: none;
+        }
+
+    /* Botão */
+    .login-btn {
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        background-color: #495057; /* Cinza escuro */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .login-btn:hover {
+            background-color: #343a40;
+        }
+
+    /* Link "Esqueceu a senha" */
+    .login-link {
+        color: #6c757d;
+        text-decoration: none;
+        font-size: 0.85rem;
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+        .login-link:hover {
+            color: #495057;
+        }
+</style>
+
+<!-- Formulário de Login (centralizado) -->
+<div class="login-container">
+    <div class="login-card">
+        <h1 class="login-title">Login</h1>
+        <p class="login-subtitle">Acesse sua conta para continuar</p>
+
+        <form asp-action="Login" method="post">
+            <input type="email"
+                   name="email"
+                   placeholder="E-mail"
+                   class="login-input"
+                   required />
+            <input type="password"
+                   name="senha"
+                   placeholder="Senha"
+                   class="login-input"
+                   required />
+            <button type="submit" class="login-btn">ENTRAR</button>
+        </form>
+
+        <a href="#" class="login-link">Esqueceu sua senha?</a>
     </div>
-    <div class="form-group">
-        <label>Senha:</label>
-        <input type="password" name="senha" required />
-    </div>
-    <button type="submit" class="btn btn-primary">Login</button>
-</form>
+</div>

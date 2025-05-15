@@ -2,7 +2,82 @@
     ViewData["Title"] = "Home Page";
 }
 
+<style>
+    /* Reset básico */
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        font-family: 'Arial', sans-serif;
+    }
+
+    /* Container do vídeo de fundo */
+    .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    /* Estilização do vídeo */
+    .video-background video {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        filter: brightness(0.7); /* Escurece o vídeo para melhor contraste */
+    }
+
+    /* Overlay escuro para melhorar legibilidade */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Conteúdo principal centralizado */
+    .text-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        width: 100%;
+        padding: 0 20px;
+        z-index: 1;
+    }
+
+    .display-4 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    p {
+        font-size: 1.8rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+</style>
+
+<!-- Vídeo de fundo -->
+<div class="video-background">
+    <video autoplay muted loop playsinline>
+        <source src= "Video/8262626-hd_1920_1080_30fps (2).mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+    </video>
+    <div class="overlay"></div>
+</div>
+
+<!-- Conteúdo principal -->
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Mais que um carro, uma lenda em movimento</h1>
+    <p>A arte da velocidade, desde 1947</p>
 </div>
