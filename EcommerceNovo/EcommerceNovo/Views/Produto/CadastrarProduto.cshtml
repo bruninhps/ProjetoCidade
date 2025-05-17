@@ -1,47 +1,31 @@
 ﻿@model EcommerceNovo.Models.Produto
 <link href="~/css/cadastrarproduto.css" rel="stylesheet" />
 
-<div class="container">
-    <h1>CADASTRAR NOVA MÁQUINA FERRARI</h1>
-    <hr />
+<div class="container" style="max-width: 500px; margin-top: 20px;">
+    <h2>Cadastro de Máquina Ferrari</h2>
+    <form asp-action="CadastrarProduto">
+        <div asp-validation-summary="ModelOnly" class="text-muted" style="color: #888;"></div>
 
-    <div class="row">
-        <div class="col-md-4">
-            <form asp-action="CadastrarProduto">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <label asp-for="Nome">Nome da Máquina</label>
+        <input asp-for="Nome" class="form-control mb-2" placeholder="Ex: Ferrari SF90 Stradale" />
+        <span asp-validation-for="Nome" style="color: #888;"></span>
 
-                <div class="form-group">
-                    <label asp-for="Nome" class="control-label">NOME DA MÁQUINA</label>
-                    <input asp-for="Nome" class="form-control" placeholder="Ex: Ferrari SF90 Stradale" />
-                    <span asp-validation-for="Nome" class="text-danger"></span>
-                </div>
+        <label asp-for="Descricao">Descrição Técnica</label>
+        <textarea asp-for="Descricao" class="form-control mb-2" rows="3"></textarea>
+        <span asp-validation-for="Descricao" style="color: #888;"></span>
 
-                <div class="form-group">
-                    <label asp-for="Descricao" class="control-label">DESCRIÇÃO TÉCNICA</label>
-                    <textarea asp-for="Descricao" class="form-control" rows="3"></textarea>
-                    <span asp-validation-for="Descricao" class="text-danger"></span>
-                </div>
+        <label asp-for="Quantidade">Quantidade em Estoque</label>
+        <input asp-for="Quantidade" class="form-control mb-2" type="number" />
+        <span asp-validation-for="Quantidade" style="color: #888;"></span>
 
-                <div class="form-group">
-                    <label asp-for="Quantidade" class="control-label">QUANTIDADE EM ESTOQUE</label>
-                    <input asp-for="Quantidade" class="form-control" type="number" />
-                    <span asp-validation-for="Quantidade" class="text-danger"></span>
-                </div>
+        <label asp-for="Preco">Preço (R$)</label>
+        <input asp-for="Preco" class="form-control mb-3" type="number" step="0.01" />
+        <span asp-validation-for="Preco" style="color: #888;"></span>
 
-                <div class="form-group">
-                    <label asp-for="Preco" class="control-label">PREÇO (R$)</label>
-                    <input asp-for="Preco" class="form-control" type="number" step="0.01" />
-                    <span asp-validation-for="Preco" class="text-danger"></span>
-                </div>
+        <button type="submit" class="btn btn-secondary w-100">Cadastrar Máquina</button>
+    </form>
 
-                <div class="form-group">
-                    <input type="submit" value="CADASTRAR MÁQUINA" class="btn btn-primary" />
-                </div>
-            </form>
-
-            <div class="text-center">
-                <a asp-action="Index" class="back-link">← VOLTAR PARA LISTA</a>
-            </div>
-        </div>
+    <div class="text-center mt-3">
+        <a asp-action="Index" class="text-decoration-none">← Voltar para lista</a>
     </div>
 </div>
